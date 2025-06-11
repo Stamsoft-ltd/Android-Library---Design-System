@@ -18,9 +18,11 @@ You'll need a **GitHub Personal Access Token (PAT)** with the following scope:
 
 Create a token [here](https://github.com/settings/tokens), then add the following to your `~/.gradle/gradle.properties` file:
 
-```properties
+```
+properties
 gpr.user=YOUR_GITHUB_USERNAME
-gpr.key=YOUR_GITHUB_PAT```
+gpr.key=YOUR_GITHUB_PAT
+```
 
 ### 2. Add the GitHub Maven repository
 
