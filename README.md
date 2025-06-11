@@ -131,3 +131,21 @@ class MainActivity : ComponentActivity() {
 }
 ```
 
+Add your MainScreen and call your wished UI components:
+
+```
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import com.designssystem.designsystem.PrimaryButton
+import com.designssystem.designsystem.R
+
+@Composable
+fun MainScreen(modifier: Modifier = Modifier) {
+    PrimaryButton(
+        modifier = modifier,
+        text = "Get Started",
+        font = R.font.your_font, // replace with your font resource
+        onClick = { /* Handle click */ }
+    )
+}
+```
