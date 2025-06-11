@@ -52,8 +52,12 @@ publishing {
 
     repositories {
         maven {
-            name = "testrepo"
-            url = layout.buildDirectory.dir("testrepo").get().asFile.toURI()
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Stamsoft-ltd/Android-Library---Design-System")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+            }
         }
     }
 }
