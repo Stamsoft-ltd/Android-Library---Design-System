@@ -40,7 +40,8 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
-}```
+}
+```
 
 ### 3. Add the dependency
 
@@ -50,6 +51,7 @@ In your **module-level `build.gradle.kts`** (usually `app/build.gradle.kts`), ad
 dependencies {
     implementation("com.stamsoft:designsystem:1.0.0")
 }
+```
 
 🔄 Replace 1.0.0 with the latest version
 
@@ -89,8 +91,6 @@ Centralized styling constants:
 
 Follow these examples to quickly integrate the design system into your app.
 
----
-
 ### 🧩 1. Apply the Theme in `MainActivity`
 
 Wrap your UI in `MyApplicationTheme` to enable custom colors and dark mode support:
@@ -126,5 +126,6 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-}```
+}
+```
 
