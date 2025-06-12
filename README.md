@@ -19,7 +19,6 @@ You'll need a **GitHub Personal Access Token (PAT)** with the following scope:
 Create a token [here](https://github.com/settings/tokens), then add the following to your `~/.gradle/gradle.properties` file:
 
 ```
-properties
 gpr.user=YOUR_GITHUB_USERNAME
 gpr.key=YOUR_GITHUB_PAT
 ```
@@ -45,13 +44,6 @@ dependencyResolutionManagement {
     }
 }
 
-```
-In your **gradle-properties** file add your github username and PAT:
-
-```
-gpr.user = YOUR-USERNAME
-gpr.key = YOUR-TOKEN
-```
 ### 3. Add the dependency
 
 In your **module-level `build.gradle.kts`** (usually `app/build.gradle.kts`), add the library to your dependencies block:
