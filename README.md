@@ -43,6 +43,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+```
 
 ### 3. Add the dependency
 
