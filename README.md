@@ -26,36 +26,43 @@ gpr.key=YOUR_GITHUB_PAT
 
 ### 2. Add the GitHub Maven repository
 
-Add the following to your **`settings.gradle.kts`** or **top-level `build.gradle.kts`** file:
+Add the following to your **`settings.gradle.kts`** file:
 
 ```
 dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/Stamsoft-ltd/Android-Library---Design-System")
             credentials {
-                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+                username = providers.gradleProperty("gpr.user").get()
+                password = providers.gradleProperty("gpr.key").get()
             }
         }
         google()
         mavenCentral()
     }
 }
-```
 
+```
+In your **gradle-properties** file add your github username and PAT:
+
+```
+gpr.user = YOUR-USERNAME
+gpr.key = YOUR-TOKEN
+```
 ### 3. Add the dependency
 
 In your **module-level `build.gradle.kts`** (usually `app/build.gradle.kts`), add the library to your dependencies block:
 
 ```
 dependencies {
-    implementation("com.stamsoft:designsystem:1.0.0")
+    implementation("com.stamsoft:designsystem:1.1")
 }
 ```
 
-🔄 Replace 1.0.0 with the latest version
+🔄 Replace 1.1 with the latest version
 
 ## 🔍 Quick Overview
 
